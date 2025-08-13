@@ -66,6 +66,18 @@
             key-positions = <2 3>;
             layers = <0>;
         };
+
+        dqten {
+            bindings = <&kp DQT>;
+            key-positions = <28 29>;
+            layers = <2>;
+        };
+
+        dqtru {
+            bindings = <&kp RU_DQT>;
+            key-positions = <28 29>;
+            layers = <3>;
+        };
     };
 
     macros {
