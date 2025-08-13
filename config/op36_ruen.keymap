@@ -78,6 +78,42 @@
             key-positions = <28 29>;
             layers = <3>;
         };
+
+        smlpen {
+            bindings = <&smile_positive_en>;
+            key-positions = <11 12>;
+            layers = <2>;
+        };
+
+        smlpru {
+            bindings = <&smile_positive_ru>;
+            key-positions = <11 12>;
+            layers = <3>;
+        };
+
+        smlnen {
+            bindings = <&smile_negative_en>;
+            key-positions = <12 13>;
+            layers = <2>;
+        };
+
+        smlnru {
+            bindings = <&smile_negative_ru>;
+            key-positions = <12 13>;
+            layers = <3>;
+        };
+
+        smlden {
+            bindings = <&smile_rofl_en>;
+            key-positions = <11 12 13>;
+            layers = <2>;
+        };
+
+        smldru {
+            bindings = <&smile_rofl_ru>;
+            key-positions = <11 12 13>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -119,6 +155,48 @@
                 <&macro_wait_time 10>;
 
             label = "EN";
+        };
+
+        smile_positive_en: smile_positive_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp MINUS &kp COLON>;
+            label = "SMILE_POSITIVE_EN";
+        };
+
+        smile_positive_ru: smile_positive_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_LPAR &kp RU_MINUS &kp RU_COLON>;
+            label = "SMILE_POSITIVE_RU";
+        };
+
+        smile_negative_en: smile_negative_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR &kp MINUS &kp COLON>;
+            label = "SMILE_NEGATIVE_EN";
+        };
+
+        smile_negative_ru: smile_negative_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_RPAR &kp RU_MINUS &kp RU_COLON>;
+            label = "SMILE_NEGATIVE_RU";
+        };
+
+        smile_rofl_en: smile_rofl_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp LS(D)>;
+            label = "SMILE_ROFL_EN";
+        };
+
+        smile_rofl_ru: smile_rofl_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_COLON &en LS(D)>;
+            label = "SMILE_ROFL_RU";
         };
     };
 
